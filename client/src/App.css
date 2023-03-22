@@ -1,0 +1,41 @@
+.app {
+    background-color:  rgb(243, 234, 234);
+    padding: 20px;
+}
+
+h2 {
+	margin: 10px 0;
+	padding: 0;
+}
+
+form {
+	width: 75%;
+	margin: 0 auto;
+	background: rgba(143, 112, 112, 0.7);
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+label {
+	min-width: 100px;
+	display: inline-block;
+}
+
+.form-wrap {
+	margin-bottom: 10px;
+}
+
+.button {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+hr {
+    background-color: #783e38;
+    height: .1rem;
+}
+
+h2, p, button {
+    color: #371b18;
+}
+
