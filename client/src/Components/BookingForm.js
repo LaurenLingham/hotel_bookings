@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { postBooking } from "./BookingService";
 
 const BookingForm = ({ addBooking }) => {
-    const [formData, setFormData] = useState({checked_in: "false"});
+    const defaultFormData = { checked_in: "false" };
+
+    const [formData, setFormData] = useState(defaultFormData);
 
     const onChange = (e) => {
         formData[e.target.name] = e.target.value;
@@ -11,9 +13,12 @@ const BookingForm = ({ addBooking }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         postBooking(formData).then(data => {
             addBooking(data);
         });
+
+        setFormData(defaultFormData);
         e.target.reset();
     };
 
