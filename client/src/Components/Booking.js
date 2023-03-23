@@ -56,11 +56,11 @@ const Booking = ({ booking, removeBooking }) => {
                 </div>
                 <div>
                     <label htmlFor="checked_in">Checked in</label>
-                    <input type="radio" checked={checkedIn === true} id="checked_in" name="checked_in" onChange={handleCheckedInChange} value="true"/>
+                    <input type="radio" id="checked_in" name="checked_in" onChange={handleCheckedInChange} value="true" />
                 </div>
                 <div>
-                    <label htmlFor="checked_in">Checked out</label>
-                    <input type="radio" checked={checkedIn === false} id="checked_in" name="checked_in" onChange={handleCheckedInChange} value="false"/>
+                    <label htmlFor="checked_out">Checked out</label>
+                    <input type="radio" defaultChecked id="checked_out" name="checked_in" onChange={handleCheckedInChange} value="false" />
                 </div>
                 <input id="button" type="submit" value="Update Booking" />
             </form>
@@ -71,7 +71,7 @@ const Booking = ({ booking, removeBooking }) => {
             <p className="booking-date">{booking.date}</p>
             <p className="booking-name">{booking.name}</p>
             <p className="booking-email">{booking.email}</p>
-            <p className="booking-checked-in">Checked in: {booking.checked_in}</p>
+            <p className="booking-checked-in">Checked in: {booking.checked_in ? "Yes" : "No"}</p>
             <button className="button" onClick={handleUpdate}>Edit</button>
             <button className="button" onClick={handleDelete}>Delete</button>
             <hr></hr>
